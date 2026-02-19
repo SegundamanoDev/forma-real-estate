@@ -13,10 +13,12 @@ import PropertyDetails from "./pages/PropertyDetails";
 import Login from "./pages/Login";
 import AdminDashboard from "./pages/AdminDashboard";
 import React from "react";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-secondary flex flex-col font-sans selection:bg-accent selection:text-white">
         {/* The Navbar stays at the top of every page */}
         <Navbar />
