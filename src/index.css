@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap");
+@import "tailwindcss";
+
+/* 1. Import the Luxury Fonts */
+
+@theme {
+  /* 2. Color System */
+  --color-primary: #111827; /* Deep Charcoal */
+  --color-secondary: #f9fafb; /* Soft Gray / Off-White */
+  --color-accent: #947346; /* Sophisticated Gold */
+  --color-accent-hover: #7a5f3a;
+  --color-card-bg: #ffffff; /* Pure White */
+
+  /* 3. Typography */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+
+  /* 4. Luxury Spacing/Transitions */
+  --animate-subtle-lift: lift 0.4s ease-out forwards;
+
+  @keyframes lift {
+    to {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+  }
+}
+
+/* Base styles to ensure the luxury feel across the site */
+@layer base {
+  body {
+    @apply bg-secondary text-primary font-sans;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}
